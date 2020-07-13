@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+echo "**** installing hugo from deb ****"
+
+dpkg -i /root-level/hugo.deb
+
+echo "**** done installing hugo ****"
