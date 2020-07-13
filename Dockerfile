@@ -7,7 +7,7 @@ RUN \
     curl \
     grep && \
 if [ -z ${HUGO_VERSION+x} ]; then \
-    HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "tag_name.*" | cut -d ":" -f 2,3 | tr -d '\",v'); \
+    HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "tag_name.*" | cut -d ":" -f 2,3 | tr -d '\",v '); \
 fi && \
 mkdir -p /root-layer/hugo && \
 curl -o \
