@@ -18,7 +18,7 @@ curl -o \
 #     tar xzf "/root-layer/hugo/hugo_${i}.tar.gz" -C "/tmp/${i}"; \
 # done
 
-# COPY root/ /root-layer/
+COPY root/ /root-layer/
 
 FROM scratch
 
