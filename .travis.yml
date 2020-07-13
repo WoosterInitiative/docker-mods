@@ -12,9 +12,6 @@ services:
 env:
   global:
     - DOCKERHUB="wooska/code-server-hugo"
-    # - HUGO_VERSION="0.73.0"
-  # - HUGO_VERSION="latest"
-  - HUGO_VERSION="0.73.0"
 
 jobs:
   include:
@@ -22,7 +19,7 @@ jobs:
       if: (NOT (type IN (pull_request)))
       script:
         # Build image
-        - docker build --no-cache -t ${DOCKERHUB}:${TRAVIS_COMMIT} .
+        - docker build --no-cache -t ${DOCKERHUB}:${TRAVIS_COMMIT} HUGO_VERSION="0.73.0" .
         - docker tag ${DOCKERHUB}:${TRAVIS_COMMIT} ${DOCKERHUB}:latest
         # Login to DockerHub
         - echo $DOCKERPASS | docker login -u $DOCKERUSER --password-stdin
