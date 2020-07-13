@@ -12,6 +12,8 @@ services:
 env:
   global:
     - DOCKERHUB="wooska/code-server-hugo"
+  # - HUGO_VERSION="latest"
+  # - HUGO_VERSION="0.74.0"
 
 jobs:
   include:
