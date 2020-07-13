@@ -14,7 +14,7 @@ mkdir -p /root-layer/hugo && \
 
 curl -o \
     /root-layer/hugo/hugo_x86_64.tar.gz -L \
-    https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz && \
+    https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 COPY root/ /root-layer/
 
