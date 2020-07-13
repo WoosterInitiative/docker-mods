@@ -1,7 +1,12 @@
 #!/usr/bin/with-contenv bash
 
-echo "**** installing hugo from deb ****"
+if [ -f "/hugo/hugo.deb" ]; then
+    echo "**** installing hugo from deb ****"
 
-dpkg -i /root-level/hugo.deb
+    dpkg -i /hugo/hugo.deb
+    rm -rf /hugo
 
-echo "**** done installing hugo ****"
+    echo "**** done installing hugo ****"
+else
+    echo "**** Hugo already installed ****"
+fi
